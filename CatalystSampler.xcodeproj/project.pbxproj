@@ -22,6 +22,9 @@
 		ADCC726B23D2D7A9004B2BAD /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC726A23D2D7A9004B2BAD /* ToolbarView.swift */; };
 		ADCC726D23D2D7C5004B2BAD /* TouchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC726C23D2D7C5004B2BAD /* TouchBarView.swift */; };
 		ADCC726F23D2D838004B2BAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC726E23D2D838004B2BAD /* ContentView.swift */; };
+		ADCC727323D2DF69004B2BAD /* ContextTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC727223D2DF69004B2BAD /* ContextTableView.swift */; };
+		ADCC733823D2F01E004B2BAD /* ContextMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */; };
+		ADCC733A23D30AB8004B2BAD /* ContextCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		ADCC726A23D2D7A9004B2BAD /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		ADCC726C23D2D7C5004B2BAD /* TouchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarView.swift; sourceTree = "<group>"; };
 		ADCC726E23D2D838004B2BAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADCC727223D2DF69004B2BAD /* ContextTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextTableView.swift; sourceTree = "<group>"; };
+		ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuViewController.swift; sourceTree = "<group>"; };
+		ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,9 @@
 		ADCC726223D2D71C004B2BAD /* ContextMenu */ = {
 			isa = PBXGroup;
 			children = (
+				ADCC733623D2F013004B2BAD /* ViewController */,
+				ADCC727023D2DF53004B2BAD /* TableView */,
+				ADCC727123D2DF59004B2BAD /* CollectionView */,
 				ADCC726623D2D74D004B2BAD /* ContextMenuView.swift */,
 			);
 			path = ContextMenu;
@@ -220,6 +229,30 @@
 				ADCC726C23D2D7C5004B2BAD /* TouchBarView.swift */,
 			);
 			path = Touchbar;
+			sourceTree = "<group>";
+		};
+		ADCC727023D2DF53004B2BAD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC727223D2DF69004B2BAD /* ContextTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		ADCC727123D2DF59004B2BAD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		ADCC733623D2F013004B2BAD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,9 +394,12 @@
 				ADCC726123D2D595004B2BAD /* Localizable.swift in Sources */,
 				ADCC726723D2D74D004B2BAD /* ContextMenuView.swift in Sources */,
 				ADCC726F23D2D838004B2BAD /* ContentView.swift in Sources */,
+				ADCC733A23D30AB8004B2BAD /* ContextCollectionView.swift in Sources */,
 				ADCC722723D2D314004B2BAD /* SceneDelegate.swift in Sources */,
+				ADCC733823D2F01E004B2BAD /* ContextMenuViewController.swift in Sources */,
 				ADCC726D23D2D7C5004B2BAD /* TouchBarView.swift in Sources */,
 				ADCC726923D2D791004B2BAD /* SceneControlView.swift in Sources */,
+				ADCC727323D2DF69004B2BAD /* ContextTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
