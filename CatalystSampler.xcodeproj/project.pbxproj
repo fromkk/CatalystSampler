@@ -25,6 +25,7 @@
 		ADCC727323D2DF69004B2BAD /* ContextTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC727223D2DF69004B2BAD /* ContextTableView.swift */; };
 		ADCC733823D2F01E004B2BAD /* ContextMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */; };
 		ADCC733A23D30AB8004B2BAD /* ContextCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */; };
+		ADCC73FF23D32BC0004B2BAD /* NSUserActivity+extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC73FE23D32BC0004B2BAD /* NSUserActivity+extenions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		ADCC727223D2DF69004B2BAD /* ContextTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextTableView.swift; sourceTree = "<group>"; };
 		ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuViewController.swift; sourceTree = "<group>"; };
 		ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextCollectionView.swift; sourceTree = "<group>"; };
+		ADCC73FE23D32BC0004B2BAD /* NSUserActivity+extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+extenions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				ADCC725923D2D4FF004B2BAD /* Resources */,
 				ADCC725823D2D4E7004B2BAD /* Supports */,
+				ADCC73FD23D32BAF004B2BAD /* Extensions */,
 				ADCC725423D2D47C004B2BAD /* Contents */,
 				ADCC722423D2D314004B2BAD /* AppDelegate.swift */,
 				ADCC722623D2D314004B2BAD /* SceneDelegate.swift */,
@@ -253,6 +256,14 @@
 				ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ADCC73FD23D32BAF004B2BAD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC73FE23D32BC0004B2BAD /* NSUserActivity+extenions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADCC73FF23D32BC0004B2BAD /* NSUserActivity+extenions.swift in Sources */,
 				ADCC722523D2D314004B2BAD /* AppDelegate.swift in Sources */,
 				ADCC725723D2D495004B2BAD /* MenuView.swift in Sources */,
 				ADCC726B23D2D7A9004B2BAD /* ToolbarView.swift in Sources */,
@@ -580,7 +592,7 @@
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CatalystSampler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +613,7 @@
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CatalystSampler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
