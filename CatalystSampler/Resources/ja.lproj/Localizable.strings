@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CatalystSampler
+
+  Created by Kazuya Ueoka on 2020/01/18.
+  Copyright © 2020 fromKK. All rights reserved.
+*/
+
+"menu_context" = "コンテキストメニュー";
+"menu_scene" = "シーン操作";
+"menu_toolbar" = "ツールバー";
+"menu_touchbar" = "タッチバー";

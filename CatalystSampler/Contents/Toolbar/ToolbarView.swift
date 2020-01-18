@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ToolbarView.swift
 //  CatalystSampler
 //
 //  Created by Kazuya Ueoka on 2020/01/18.
@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ToolbarView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("toolbar")
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ToolbarView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ToolbarView()
     }
 }
