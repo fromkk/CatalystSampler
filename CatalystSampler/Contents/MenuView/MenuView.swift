@@ -17,6 +17,7 @@ enum MenuItem: String, Identifiable, CaseIterable, Localizable {
 }
 
 struct MenuItemView: View {
+    @State var isShowDontSupportMultipleWindow: Bool = false
     let menu: MenuItem
     var body: some View {
         Group {
@@ -25,12 +26,27 @@ struct MenuItemView: View {
             } else if menu == .scene {
                 NavigationLink(menu.localized(), destination: SceneControlView())
             } else if menu == .toolbar {
-                NavigationLink(menu.localized(), destination: ToolbarView())
+                Button(action: {
+                    self.showToolbar()
+                }, label: {
+                    Text("Toolbar")
+                })
             } else if menu == .touchBar {
                 NavigationLink(menu.localized(), destination: TouchBarView())
             } else {
                 EmptyView()
             }
+        }.alert(isPresented: $isShowDontSupportMultipleWindow) {
+            Alert(title: Text("Error"), message: Text("Don't support multiple window"), dismissButton: Alert.Button.default(Text("OK")))
+        }
+    }
+    
+    private func showToolbar() {
+        if UIApplication.shared.supportsMultipleScenes {
+            UIApplication.shared.requestSceneSessionActivation(nil, userActivity: .toolbar, options: nil, errorHandler: nil)
+            isShowDontSupportMultipleWindow = false
+        } else {
+            isShowDontSupportMultipleWindow = true
         }
     }
 }

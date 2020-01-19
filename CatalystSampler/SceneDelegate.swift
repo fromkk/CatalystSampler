@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.window = window
                 window.makeKeyAndVisible()
             }
-            
+
             func setUpDefaultView() {
                 setUp(view: ContentView())
             }
@@ -31,6 +31,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 switch activityType {
                 case NSUserActivity.contextMenu.activityType:
                     setUp(view: NavigationView { ContextMenuView() })
+                case NSUserActivity.toolbar.activityType:
+                    var toolbarView = ToolbarView()
+                    #if targetEnvironment(macCatalyst)
+                    let toolbar = NSToolbar(identifier: .customToolbar)
+                    toolbarView.setUpToolbar(with: toolbar)
+                    windowScene.titlebar?.toolbar = toolbar
+                    #endif
+                    setUp(view: NavigationView { toolbarView } )
                 default:
                     setUpDefaultView()
                 }
