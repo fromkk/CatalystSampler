@@ -34,6 +34,8 @@ final class ToolbarDelegate: NSObject, NSToolbarDelegate {
     private var isFavorite: Bool = false
     init(toolbar: NSToolbar) {
         super.init()
+        toolbar.allowsUserCustomization = true
+        toolbar.autosavesConfiguration = true
         toolbar.displayMode = .iconOnly
         toolbar.delegate = self
         toolbar.insertItem(withItemIdentifier: .arrowGroup, at: 0)
