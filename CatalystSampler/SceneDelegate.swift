@@ -12,7 +12,7 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var toolbarDelegate: ToolbarDelegate?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
@@ -32,10 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 case NSUserActivity.contextMenu.activityType:
                     setUp(view: NavigationView { ContextMenuView() })
                 case NSUserActivity.toolbar.activityType:
-                    var toolbarView = ToolbarView()
+                    let toolbarView = ToolbarView()
                     #if targetEnvironment(macCatalyst)
                     let toolbar = NSToolbar(identifier: .customToolbar)
-                    toolbarView.setUpToolbar(with: toolbar)
+                    toolbarDelegate = ToolbarDelegate(toolbar: toolbar)
+                    toolbar.delegate = toolbarDelegate
                     windowScene.titlebar?.toolbar = toolbar
                     #endif
                     setUp(view: NavigationView { toolbarView } )
