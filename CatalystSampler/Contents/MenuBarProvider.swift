@@ -14,11 +14,15 @@ extension UIMenu.Identifier {
 }
 
 extension UIMenu {
-    static let hoge: UIAction = .init(title: "Hoge", handler: { _ in print("Hoge") })
-    static let fuga: UIAction = .init(title: "Fuga", handler: { _ in print("Fuga") })
-    static let custom: UIMenu = .init(title: "Custom", image: nil, identifier: .custom, options: [.destructive], children: [
-        UIMenu.hoge,
-        UIMenu.fuga
+    static let hoge = UICommand(title: "Hoge", action: #selector(AppDelegate.hoge))
+    static let fuga = UIAction(title: "Fuga", handler: { _ in print("Fuga") })
+    static let custom: UIMenu = .init(
+        title: "Custom",
+        image: nil,
+        identifier: .custom,
+        options: [.destructive], children: [
+            UIMenu.hoge,
+            UIMenu.fuga
     ])
 }
 

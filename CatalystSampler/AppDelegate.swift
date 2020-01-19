@@ -18,12 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    #if targetEnvironment(macCatalyst)
-    override func buildMenu(with builder: UIMenuBuilder) {
-        super.buildMenu(with: builder)
-        MenuBarProvider.run(with: builder)
+#if targetEnvironment(macCatalyst)
+override func buildMenu(with builder: UIMenuBuilder) {
+    super.buildMenu(with: builder)
+    MenuBarProvider.run(with: builder)
+}
+#endif
+
+@objc func hoge() {
+    print("hoge")
+}
+
+override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+    if action == UIMenu.hoge.action {
+        return false
+    } else {
+        return super.canPerformAction(action, withSender: sender)
     }
-    #endif
+}
 
     // MARK: UISceneSession Lifecycle
 
