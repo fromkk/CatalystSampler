@@ -30,11 +30,15 @@ override func buildMenu(with builder: UIMenuBuilder) {
 }
 
 override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+    #if targetEnvironment(macCatalyst)
     if action == UIMenu.hoge.action {
         return false
     } else {
         return super.canPerformAction(action, withSender: sender)
     }
+    #else
+    return super.canPerformAction(action, withSender: sender)
+    #endif
 }
 
     // MARK: UISceneSession Lifecycle
