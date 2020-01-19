@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AEB723D433F9000A7C7D /* SceneListView.swift */; };
+		ADB1AEBA23D43675000A7C7D /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AEB923D43675000A7C7D /* String+extension.swift */; };
 		ADCC722523D2D314004B2BAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC722423D2D314004B2BAD /* AppDelegate.swift */; };
 		ADCC722723D2D314004B2BAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC722623D2D314004B2BAD /* SceneDelegate.swift */; };
 		ADCC722B23D2D315004B2BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCC722A23D2D315004B2BAD /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADB1AEB723D433F9000A7C7D /* SceneListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneListView.swift; sourceTree = "<group>"; };
+		ADB1AEB923D43675000A7C7D /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		ADCC722123D2D314004B2BAD /* CatalystSampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalystSampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCC722423D2D314004B2BAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADCC722623D2D314004B2BAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCC726823D2D791004B2BAD /* SceneControlView.swift */,
+				ADB1AEB723D433F9000A7C7D /* SceneListView.swift */,
 			);
 			path = SceneControl;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCC73FE23D32BC0004B2BAD /* NSUserActivity+extenions.swift */,
+				ADB1AEB923D43675000A7C7D /* String+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				ADCC73FF23D32BC0004B2BAD /* NSUserActivity+extenions.swift in Sources */,
 				ADCC722523D2D314004B2BAD /* AppDelegate.swift in Sources */,
 				ADCC725723D2D495004B2BAD /* MenuView.swift in Sources */,
+				ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */,
 				ADCC726B23D2D7A9004B2BAD /* ToolbarView.swift in Sources */,
 				ADCC726123D2D595004B2BAD /* Localizable.swift in Sources */,
 				ADCC726723D2D74D004B2BAD /* ContextMenuView.swift in Sources */,
@@ -409,6 +416,7 @@
 				ADCC733A23D30AB8004B2BAD /* ContextCollectionView.swift in Sources */,
 				ADCC722723D2D314004B2BAD /* SceneDelegate.swift in Sources */,
 				ADCC733823D2F01E004B2BAD /* ContextMenuViewController.swift in Sources */,
+				ADB1AEBA23D43675000A7C7D /* String+extension.swift in Sources */,
 				ADCC726D23D2D7C5004B2BAD /* TouchBarView.swift in Sources */,
 				ADCC726923D2D791004B2BAD /* SceneControlView.swift in Sources */,
 				ADCC727323D2DF69004B2BAD /* ContextTableView.swift in Sources */,
