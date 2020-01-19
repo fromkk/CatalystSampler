@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AEB723D433F9000A7C7D /* SceneListView.swift */; };
 		ADB1AEBA23D43675000A7C7D /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AEB923D43675000A7C7D /* String+extension.swift */; };
+		ADB1AF7F23D454B3000A7C7D /* MenuBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AF7E23D454B3000A7C7D /* MenuBarProvider.swift */; };
 		ADCC722523D2D314004B2BAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC722423D2D314004B2BAD /* AppDelegate.swift */; };
 		ADCC722723D2D314004B2BAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC722623D2D314004B2BAD /* SceneDelegate.swift */; };
 		ADCC722B23D2D315004B2BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCC722A23D2D315004B2BAD /* Assets.xcassets */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		ADB1AEB723D433F9000A7C7D /* SceneListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneListView.swift; sourceTree = "<group>"; };
 		ADB1AEB923D43675000A7C7D /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		ADB1AEBB23D4407B000A7C7D /* CatalystSampler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatalystSampler.entitlements; sourceTree = "<group>"; };
+		ADB1AF7E23D454B3000A7C7D /* MenuBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarProvider.swift; sourceTree = "<group>"; };
 		ADCC722123D2D314004B2BAD /* CatalystSampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalystSampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCC722423D2D314004B2BAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADCC722623D2D314004B2BAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		ADCC722323D2D314004B2BAD /* CatalystSampler */ = {
 			isa = PBXGroup;
 			children = (
+				ADB1AEBB23D4407B000A7C7D /* CatalystSampler.entitlements */,
 				ADCC725923D2D4FF004B2BAD /* Resources */,
 				ADCC725823D2D4E7004B2BAD /* Supports */,
 				ADCC73FD23D32BAF004B2BAD /* Extensions */,
@@ -169,22 +173,23 @@
 		ADCC725423D2D47C004B2BAD /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				ADCC725523D2D489004B2BAD /* Menu */,
+				ADCC725523D2D489004B2BAD /* MenuView */,
 				ADCC726223D2D71C004B2BAD /* ContextMenu */,
 				ADCC726323D2D727004B2BAD /* SceneControl */,
 				ADCC726423D2D730004B2BAD /* Toolbar */,
 				ADCC726523D2D737004B2BAD /* Touchbar */,
 				ADCC726E23D2D838004B2BAD /* ContentView.swift */,
+				ADB1AF7E23D454B3000A7C7D /* MenuBarProvider.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
 		};
-		ADCC725523D2D489004B2BAD /* Menu */ = {
+		ADCC725523D2D489004B2BAD /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
 				ADCC725623D2D495004B2BAD /* MenuView.swift */,
 			);
-			path = Menu;
+			path = MenuView;
 			sourceTree = "<group>";
 		};
 		ADCC725823D2D4E7004B2BAD /* Supports */ = {
@@ -410,6 +415,7 @@
 				ADCC725723D2D495004B2BAD /* MenuView.swift in Sources */,
 				ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */,
 				ADCC726B23D2D7A9004B2BAD /* ToolbarView.swift in Sources */,
+				ADB1AF7F23D454B3000A7C7D /* MenuBarProvider.swift in Sources */,
 				ADCC726123D2D595004B2BAD /* Localizable.swift in Sources */,
 				ADCC726723D2D74D004B2BAD /* ContextMenuView.swift in Sources */,
 				ADCC726F23D2D838004B2BAD /* ContentView.swift in Sources */,
@@ -595,7 +601,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CatalystSampler/CatalystSampler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystSampler/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
@@ -607,6 +615,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.CatalystSampler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -616,7 +625,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CatalystSampler/CatalystSampler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystSampler/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
@@ -628,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.CatalystSampler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
