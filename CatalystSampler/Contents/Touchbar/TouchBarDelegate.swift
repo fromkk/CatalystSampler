@@ -115,8 +115,12 @@ extension TouchBarDelegate: NSTouchBarDelegate {
             let item = NSSliderTouchBarItem(identifier: .slide)
             item.label = "label"
             item.customizationLabel = "customizationLabel"
-            item.minimumValueAccessory = NSSliderAccessory(image: UIImage(systemName: "minus.magnifyingglass")!)
-            item.maximumValueAccessory = NSSliderAccessory(image: UIImage(systemName: "plus.magnifyingglass")!)
+            item.minimumValueAccessory = NSSliderAccessory(
+                image: UIImage(systemName: "minus.magnifyingglass")!
+            )
+            item.maximumValueAccessory = NSSliderAccessory(
+                image: UIImage(systemName: "plus.magnifyingglass")!
+            )
             item.action = #selector(slide(_:))
             item.target = self
             return item
@@ -142,7 +146,7 @@ extension TouchBarDelegate: NSTouchBarDelegate {
     }
     
     @objc private func slide(_ sliderItem: NSSliderTouchBarItem) {
-        print("slide")
+        print("slide \(sliderItem.value(forKey: "doubleValue"))")
     }
 }
 
