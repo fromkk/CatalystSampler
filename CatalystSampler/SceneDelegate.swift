@@ -26,6 +26,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.window = window
                 window.makeKeyAndVisible()
             }
+            
+            func setUp(_ viewController: UIViewController) {
+                let window = UIWindow(windowScene: windowScene)
+                window.rootViewController = UINavigationController(rootViewController: viewController
+                )
+                self.window = window
+                window.makeKeyAndVisible()
+            }
 
             func setUpDefaultView() {
                 setUp(view: ContentView())
@@ -44,6 +52,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     windowScene.titlebar?.toolbar = toolbar
                     #endif
                     setUp(view: NavigationView { toolbarView } )
+                case NSUserActivity.touchBar.activityType:
+                    setUp(TouchBarViewController())
                 default:
                     setUpDefaultView()
                 }

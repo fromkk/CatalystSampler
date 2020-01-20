@@ -9,5 +9,13 @@
 import Foundation
 
 extension NSUserActivity {
-    static let contextMenu: NSUserActivity = .init(activityType: "me.fromkk.CatalystSampler.ContextMenu")
+    static let contextMenu = NSUserActivity(
+        activityType: "me.fromkk.CatalystSampler.ContextMenu"
+    )
+    static let toolbar = NSUserActivity(
+        activityType: "me.fromkk.CatalystSampler.toolbar"
+    )
+    static let touchBar = NSUserActivity(
+        activityType: "me.fromkk.CatalystSampler.touchBar"
+    )
 }

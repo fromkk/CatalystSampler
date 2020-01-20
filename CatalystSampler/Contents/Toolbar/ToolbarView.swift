@@ -9,12 +9,6 @@
 import SwiftUI
 import UIKit
 
-extension NSUserActivity {
-    static let toolbar = NSUserActivity(
-        activityType: "me.fromkk.CatalystSampler.toolbar"
-    )
-}
-
 struct ToolbarView: View {
     var body: some View {
         VStack {

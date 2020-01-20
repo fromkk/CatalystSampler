@@ -27,12 +27,16 @@ struct MenuItemView: View {
                 NavigationLink(menu.localized(), destination: SceneControlView())
             } else if menu == .toolbar {
                 Button(action: {
-                    self.showToolbar()
+                    self.showNewWindow(.toolbar)
                 }, label: {
-                    Text("Toolbar")
+                    Text(menu.localized())
                 })
             } else if menu == .touchBar {
-                NavigationLink(menu.localized(), destination: TouchBarView())
+                Button(action: {
+                    self.showNewWindow(.touchBar)
+                }, label: {
+                    Text(menu.localized())
+                })
             } else {
                 EmptyView()
             }
@@ -41,9 +45,9 @@ struct MenuItemView: View {
         }
     }
     
-    private func showToolbar() {
+    private func showNewWindow(_ userActivity: NSUserActivity) {
         if UIApplication.shared.supportsMultipleScenes {
-            UIApplication.shared.requestSceneSessionActivation(nil, userActivity: .toolbar, options: nil, errorHandler: nil)
+            UIApplication.shared.requestSceneSessionActivation(nil, userActivity: userActivity, options: nil, errorHandler: nil)
             isShowDontSupportMultipleWindow = false
         } else {
             isShowDontSupportMultipleWindow = true
