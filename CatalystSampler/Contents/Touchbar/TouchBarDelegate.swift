@@ -37,6 +37,9 @@ extension NSTouchBar.CustomizationIdentifier {
     static let myTouchBar = NSTouchBar.CustomizationIdentifier(
         "me.fromkk.CatalystSampler.MyTouchBar"
     )
+    static let newTouchBar = NSTouchBar.CustomizationIdentifier(
+        "me.fromkk.CatalystSampler.newTouchBar"
+    )
 }
 
 extension NSTouchBarItem.Identifier {
@@ -105,6 +108,11 @@ extension TouchBarDelegate: NSTouchBarDelegate {
             let item = NSPopoverTouchBarItem(identifier: .popover)
             item.collapsedRepresentationImage = UIImage(systemName: "square.split.2x1.fill")!
             item.visibilityPriority = .normal
+            let newTouchBar = NSTouchBar()
+            newTouchBar.customizationIdentifier = .newTouchBar
+            newTouchBar.defaultItemIdentifiers = [.arrowGroup]
+            newTouchBar.delegate = self
+            item.popoverTouchBar = newTouchBar
             return item
         case .share:
             let item = NSSharingServicePickerTouchBarItem(identifier: .share)
@@ -155,4 +163,5 @@ extension TouchBarDelegate: UIActivityItemsConfigurationReading {
         return []
     }
 }
+
 #endif
