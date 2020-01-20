@@ -9,9 +9,15 @@
 import SwiftUI
 
 struct TouchBarView: View {
+    @EnvironmentObject var windowScene: WindowSceneEnvironmentObject
+    var touchBarDelegate = TouchBarDelegate()
     var body: some View {
         VStack {
             Text("touch bar")
+        }.onAppear {
+            #if targetEnvironment(macCatalyst)
+            self.windowScene.windowScene.touchBar = self.touchBarDelegate.makeTouchBar()
+            #endif
         }
     }
 }

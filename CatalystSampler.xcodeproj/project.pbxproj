@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADAADB2A23D54679006C2529 /* TouchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADB2923D54679006C2529 /* TouchBarDelegate.swift */; };
+		ADAADB2C23D54752006C2529 /* WindowSceneEnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAADB2B23D54752006C2529 /* WindowSceneEnvironmentObject.swift */; };
 		ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AEB723D433F9000A7C7D /* SceneListView.swift */; };
 		ADB1AEBA23D43675000A7C7D /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AEB923D43675000A7C7D /* String+extension.swift */; };
 		ADB1AF7F23D454B3000A7C7D /* MenuBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1AF7E23D454B3000A7C7D /* MenuBarProvider.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADAADB2923D54679006C2529 /* TouchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarDelegate.swift; sourceTree = "<group>"; };
+		ADAADB2B23D54752006C2529 /* WindowSceneEnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSceneEnvironmentObject.swift; sourceTree = "<group>"; };
 		ADB1AEB723D433F9000A7C7D /* SceneListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneListView.swift; sourceTree = "<group>"; };
 		ADB1AEB923D43675000A7C7D /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		ADB1AEBB23D4407B000A7C7D /* CatalystSampler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatalystSampler.entitlements; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCC726023D2D595004B2BAD /* Localizable.swift */,
+				ADAADB2B23D54752006C2529 /* WindowSceneEnvironmentObject.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCC726C23D2D7C5004B2BAD /* TouchBarView.swift */,
+				ADAADB2923D54679006C2529 /* TouchBarDelegate.swift */,
 			);
 			path = Touchbar;
 			sourceTree = "<group>";
@@ -417,7 +423,9 @@
 				ADCC722523D2D314004B2BAD /* AppDelegate.swift in Sources */,
 				ADCC725723D2D495004B2BAD /* MenuView.swift in Sources */,
 				ADB1B04323D48953000A7C7D /* ToolbarDelegate.swift in Sources */,
+				ADAADB2A23D54679006C2529 /* TouchBarDelegate.swift in Sources */,
 				ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */,
+				ADAADB2C23D54752006C2529 /* WindowSceneEnvironmentObject.swift in Sources */,
 				ADCC726B23D2D7A9004B2BAD /* ToolbarView.swift in Sources */,
 				ADB1AF7F23D454B3000A7C7D /* MenuBarProvider.swift in Sources */,
 				ADCC726123D2D595004B2BAD /* Localizable.swift in Sources */,
