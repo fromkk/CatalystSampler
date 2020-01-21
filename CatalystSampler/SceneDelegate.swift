@@ -20,9 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             func setUp<Content>(view: Content) where Content: View {
                 let window = UIWindow(windowScene: windowScene)
-                window.rootViewController = UIHostingController(rootView: view
-                    .environmentObject(WindowSceneEnvironmentObject(windowScene: windowScene))
-                )
+                window.rootViewController = UIHostingController(rootView: view)
                 self.window = window
                 window.makeKeyAndVisible()
             }
