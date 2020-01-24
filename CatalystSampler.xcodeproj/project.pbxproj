@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD37C67423DBB5C0004F47AC /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AD965BB223D6BFD800F788D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD965BB723D6C25400F788D3 /* context_menu_viewcontroller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = context_menu_viewcontroller.png; sourceTree = "<group>"; };
 		AD965BB823D6C25400F788D3 /* context_menu_swiftui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = context_menu_swiftui.png; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		AD965BB623D6C24600F788D3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD37C67423DBB5C0004F47AC /* menu.png */,
 				AD965BB823D6C25400F788D3 /* context_menu_swiftui.png */,
 				AD965BBA23D6C25400F788D3 /* context_menu_tableview.png */,
 				AD965BB923D6C25400F788D3 /* context_menu_collectionview.png */,
