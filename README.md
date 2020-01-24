@@ -9,7 +9,8 @@ This repository is sample code list for macOS Catalyst.
 
 ## Sample codes
 
-- Menu  
+- Menu
+  - MenuView  
   ![menu](Images/menu.png)
 - Context Menu
     - ContextMenuView(SwiftUI)
