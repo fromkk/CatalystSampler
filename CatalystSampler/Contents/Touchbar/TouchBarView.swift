@@ -57,9 +57,7 @@ final class TouchBarViewController: UIViewController {
             .otherItemsProxy
         ]
         touchBar.customizationAllowedItemIdentifiers = [
-            .arrowGroup, .prev, .next, .reload,
-            .flexibleSpace, .colorPicker, .popover, .share, .slide,
-            .otherItemsProxy
+            .arrowGroup, .prev, .next, .reload, .colorPicker, .popover, .share, .slide
         ]
         touchBar.delegate = self
         return touchBar
@@ -80,13 +78,20 @@ extension TouchBarViewController: NSTouchBarDelegate {
                     identifier: .prev,
                     image: UIImage(systemName: "chevron.left")!,
                     target: self,
-                    action: #selector(prev(_:))),
+                    action: #selector(prev(_:))).build {
+                        $0.customizationLabel = "Prev"
+                        return $0
+                },
                 NSButtonTouchBarItem(
                     identifier: .next,
                     image: UIImage(systemName: "chevron.right")!,
                     target: self,
-                    action: #selector(next(_:))),
+                    action: #selector(next(_:))).build {
+                        $0.customizationLabel = "Forward"
+                        return $0
+                },
             ])
+            item.customizationLabel = "Group"
             item.visibilityPriority = .high
             return item
         case .reload:
@@ -95,6 +100,7 @@ extension TouchBarViewController: NSTouchBarDelegate {
                 image: UIImage(systemName: "arrow.clockwise.circle")!,
                 target: self,
                 action: #selector(reload(_:)))
+            item.customizationLabel = "Reload"
             item.visibilityPriority = .high
             return item
         case .colorPicker:
@@ -102,6 +108,7 @@ extension TouchBarViewController: NSTouchBarDelegate {
             item.target = self
             item.action = #selector(pickedColor(_:))
             item.visibilityPriority = .normal
+            item.customizationLabel = "Color"
             return item
         case .popover:
             let item = NSPopoverTouchBarItem(identifier: .popover)
@@ -112,6 +119,7 @@ extension TouchBarViewController: NSTouchBarDelegate {
             newTouchBar.defaultItemIdentifiers = [.arrowGroup]
             newTouchBar.delegate = self
             item.popoverTouchBar = newTouchBar
+            item.customizationLabel = "Popover"
             return item
         case .share:
             let item = NSSharingServicePickerTouchBarItem(identifier: .share)
@@ -130,6 +138,7 @@ extension TouchBarViewController: NSTouchBarDelegate {
             )
             item.action = #selector(slide(_:))
             item.target = self
+            item.customizationLabel = "Slide"
             return item
         default:
             return nil

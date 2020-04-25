@@ -30,6 +30,7 @@
 		ADCC733823D2F01E004B2BAD /* ContextMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */; };
 		ADCC733A23D30AB8004B2BAD /* ContextCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */; };
 		ADCC73FF23D32BC0004B2BAD /* NSUserActivity+extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC73FE23D32BC0004B2BAD /* NSUserActivity+extenions.swift */; };
+		ADD365772454594900337865 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD365762454594900337865 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		ADCC733723D2F01E004B2BAD /* ContextMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuViewController.swift; sourceTree = "<group>"; };
 		ADCC733923D30AB8004B2BAD /* ContextCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextCollectionView.swift; sourceTree = "<group>"; };
 		ADCC73FE23D32BC0004B2BAD /* NSUserActivity+extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+extenions.swift"; sourceTree = "<group>"; };
+		ADD365762454594900337865 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCC726023D2D595004B2BAD /* Localizable.swift */,
+				ADD365762454594900337865 /* Builder.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				ADCC725723D2D495004B2BAD /* MenuView.swift in Sources */,
 				ADB1B04323D48953000A7C7D /* ToolbarDelegate.swift in Sources */,
 				ADB1AEB823D433F9000A7C7D /* SceneListView.swift in Sources */,
+				ADD365772454594900337865 /* Builder.swift in Sources */,
 				ADCC726B23D2D7A9004B2BAD /* ToolbarView.swift in Sources */,
 				ADB1AF7F23D454B3000A7C7D /* MenuBarProvider.swift in Sources */,
 				ADCC726123D2D595004B2BAD /* Localizable.swift in Sources */,
