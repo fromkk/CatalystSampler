@@ -73,7 +73,7 @@ final class ToolbarDelegate: NSObject, NSToolbarDelegate {
 
     private lazy var menu: NSMenuToolbarItem = {
         let menu = NSMenuToolbarItem(itemIdentifier: .menu)
-        menu.label = "Menu"
+        menu.image = UIImage(systemName: "ellipsis")
         menu.showsIndicator = true
         menu.itemMenu = UIMenu(title: "Menu", image: nil, identifier: nil, options: .displayInline, children: [
             UIAction(title: "hello", handler: { (_) in
