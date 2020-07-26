@@ -28,6 +28,9 @@ extension NSToolbarItem.Identifier {
     static let favorite = NSToolbarItem.Identifier(
         "me.fromkk.CatalystSampler.favorite"
     )
+    static let menu = NSToolbarItem.Identifier(
+        "me.fromkk.CatalystSampler.menu"
+    )
 }
 
 final class ToolbarDelegate: NSObject, NSToolbarDelegate {
@@ -38,8 +41,6 @@ final class ToolbarDelegate: NSObject, NSToolbarDelegate {
         toolbar.autosavesConfiguration = true
         toolbar.displayMode = .iconOnly
         toolbar.delegate = self
-        toolbar.insertItem(withItemIdentifier: .arrowGroup, at: 0)
-        toolbar.insertItem(withItemIdentifier: .reload, at: 1)
     }
 
     private lazy var arrowGroup = NSToolbarItemGroup(
@@ -70,6 +71,18 @@ final class ToolbarDelegate: NSObject, NSToolbarDelegate {
             action: #selector(tapFavorite(_:)))
     )
 
+    private lazy var menu: NSMenuToolbarItem = {
+        let menu = NSMenuToolbarItem(itemIdentifier: .menu)
+        menu.label = "Menu"
+        menu.showsIndicator = true
+        menu.itemMenu = UIMenu(title: "Menu", image: nil, identifier: nil, options: .displayInline, children: [
+            UIAction(title: "hello", handler: { (_) in
+                print("hello")
+            })
+        ])
+        return menu
+    }()
+
     @objc func tapArrowGroup(_ arrowGroup: NSToolbarItemGroup) {
         print(arrowGroup.selectedIndex)
     }
@@ -89,12 +102,12 @@ final class ToolbarDelegate: NSObject, NSToolbarDelegate {
 
     func toolbarAllowedItemIdentifiers(
         _ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
-        return [.arrowGroup, .reload, .flexibleSpace, .favorite]
+        return [.arrowGroup, .reload, .flexibleSpace, .favorite, .menu]
     }
     
     func toolbarDefaultItemIdentifiers(
         _ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
-        return [.arrowGroup, .reload, .flexibleSpace, .favorite]
+        return [.arrowGroup, .reload, .flexibleSpace, .favorite, .menu]
     }
     
     func toolbar(
@@ -109,6 +122,8 @@ final class ToolbarDelegate: NSObject, NSToolbarDelegate {
             return reload
         case .favorite:
             return favorite
+        case .menu:
+            return menu
         default:
             return nil
         }
